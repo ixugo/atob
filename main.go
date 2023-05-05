@@ -40,12 +40,12 @@ func recordErr(err error) {
 
 func main() {
 	if len(os.Args) == 2 && os.Args[1] == "-v" {
-		fmt.Println("0.1.0")
+		fmt.Println("0.1.1")
 		return
 	}
 	var a, b string
-	recordErr(input("请输入 a 结构体:", &a))
-	recordErr(input("请输入 b 结构体:", &b))
+	recordErr(input("请输入 a 结构体(输入结束按 2 下回车):", &a))
+	recordErr(input("请输入 b 结构体(输入结束按 2 下回车):", &b))
 
 	fmt.Println("正在生成函数...")
 	var temp core.Temp

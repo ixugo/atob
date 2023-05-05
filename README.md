@@ -12,5 +12,12 @@ go install github.com/ixugo/atob
 ```
 使用
 ```bash
+# 查看版本号
+atob -v
+# 使用
 atob
 ```
+
+说明: 输入完结构体，请按两次回车，表示输入完成
+
+![demo](http://img.golang.space/img-1683297297032.png)
