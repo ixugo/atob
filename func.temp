@@ -1,0 +1,3 @@
+func {{.Name}}(a {{.StructA}}, b {{.StructB}}) {
+{{range $index,$value := .Fields}}{{$value}}{{end}}
+}
