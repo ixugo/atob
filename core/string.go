@@ -74,7 +74,10 @@ func structFields(structType *ast.StructType) map[string]*ast.Field {
 		}
 		if field.Tag != nil {
 			tag := field.Tag.Value
-			fieldName = reflect.StructTag(tag[1 : len(tag)-1]).Get("atob")
+			text := reflect.StructTag(tag[1 : len(tag)-1]).Get("atob")
+			if text != "" {
+				fieldName = text
+			}
 		}
 		if fieldName != "" {
 			fields[fieldName] = field

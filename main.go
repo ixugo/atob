@@ -40,7 +40,7 @@ func recordErr(err error) {
 
 func main() {
 	if len(os.Args) == 2 && os.Args[1] == "-v" {
-		fmt.Println("0.1.1")
+		fmt.Println("0.1.2")
 		return
 	}
 	var a, b string

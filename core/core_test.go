@@ -51,11 +51,16 @@ func TestCompareStructFields(t *testing.T) {
 	const b = `
 package abc
 type UserB struct {
-	ID         int
+	` +
+		"ID    int `gorm:\"primary_key; AUTO_INCREMENT\" json:\"id\"`" +
+		`
 	Name       string
 	Age        int
-	CreateTime time.Time
-}`
+` +
+		"CreateTime time.Time `json:\"create_time\"` // 创建时间 " +
+		`
+		}
+		`
 	var temp Temp
 	if err := CompareStructFields(a, b, &temp); err != nil {
 		t.Fatal(err)
